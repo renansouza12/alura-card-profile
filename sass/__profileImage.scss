@@ -1,0 +1,18 @@
+.profile_image{
+    height: 200px;
+    width: 200px;
+    background-color: var(--White);
+    z-index: 100;
+    border-radius: 50%;
+    transition: 1s;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 0.99;
+        border-radius: 50%;
+    }
+}
+.card_profile:hover .profile_image{
+    background-color: var(--Black);
+}
