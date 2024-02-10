@@ -4,6 +4,9 @@
   --card-bg:#211E29;
   --White:#FFFFFF;
   --Black:#000000;
+  --Red:#F05941;
+  --spanColor: rgb(111, 109, 109);
+  --pColor:rgba(255, 255, 255, 0.375);
 }
 
 * {
@@ -91,18 +94,79 @@ body {
 }
 .card_informations .content {
   user-select: none;
-  color: rgba(255, 255, 255, 0.375);
   white-space: pre-wrap;
-  height: 100%;
-  width: 60%;
   font-size: 13px;
   padding-left: 1rem;
   transition: 1s;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.card_informations .content p {
+  color: var(--pColor);
+}
+.card_informations .content .bodyOpenTag, .card_informations .content .bodyCloseTag {
+  color: var(--Red);
+  transition: 1s;
+}
+.card_informations .content .content_tags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card_informations .content .content_tags .h1Tags, .card_informations .content .content_tags .h2Tags {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--Red);
+}
+.card_informations .content .content_tags .name, .card_informations .content .content_tags .title {
+  transition: 1s;
+}
+.card_informations .content .content_tags .name {
+  font-size: 1rem;
+}
+.card_informations .content .content_tags .title {
+  font-size: 14px;
+}
+.card_informations .content .id {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.card_informations .content .id span {
+  color: var(--spanColor);
+}
+.card_informations .content .kind {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.card_informations .content .kind span {
+  color: var(--spanColor);
+}
+.card_informations .content .amounts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card_informations .content .amounts .numCourses, .card_informations .content .amounts .numSteps {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.card_informations .content .amounts .numCourses span, .card_informations .content .amounts .numSteps span {
+  color: var(--spanColor);
 }
 
-.card_profile:hover .content {
+.card_profile:hover p {
   text-shadow: #FFF 0px 0px 15px;
   color: var(--White);
+}
+
+.card_profile:hover .bodyOpenTag, .card_profile:hover .bodyCloseTag, .card_profile:hover .h1Tags, .card_profile:hover .h2Tags {
+  text-shadow: var(--Red) 0px 0px 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

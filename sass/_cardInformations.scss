@@ -1,3 +1,9 @@
+@mixin alignItem(){
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .card_informations{
     height: 60vh;
     min-width: 25vw;
@@ -12,16 +18,81 @@
     border: 1px solid rgba(255, 255, 255, 0.125);
     .content{
         user-select: none;
-        color: rgba(255, 255, 255, 0.375);
         white-space: pre-wrap;
-        height: 100%;
-        width: 60%;
         font-size: 13px;
         padding-left: 1rem;
         transition: 1s;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        p{
+            color: var(--pColor);
+        }
+
+        .bodyOpenTag,.bodyCloseTag{
+            color: var(--Red);
+            transition: 1s;
+        }
+
+        .content_tags{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .h1Tags, .h2Tags{
+                @include alignItem();
+                color: var(--Red);
+            }
+            .name,.title{
+                transition: 1s;
+            }
+            .name{
+                font-size: 1rem;
+            }
+            .title{
+                font-size: 14px;
+            }
+           
+        }
+        .id{
+            @include alignItem();
+            span{
+                color: var(--spanColor);
+            }
+        }
+        .kind{
+            @include alignItem();
+            span{
+                color: var(--spanColor);
+            }
+        }
+
+        .amounts{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .numCourses , .numSteps{
+                @include alignItem();
+    
+                span{
+                    color: var(--spanColor);   
+                }
+            }
+        }
+      
+
+
     }
 }
-.card_profile:hover .content{
+.card_profile:hover p{
     text-shadow:  #FFF 0px 0px 15px;
     color: var(--White);
+}
+.card_profile:hover {
+    .bodyOpenTag, .bodyCloseTag, .h1Tags, .h2Tags{
+        text-shadow:  var(--Red) 0px 0px 15px;
+    }
+    
 }
