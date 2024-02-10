@@ -114,6 +114,7 @@ body {
 }
 .card_informations .content p {
   color: var(--pColor);
+  transition: 1s;
 }
 .card_informations .content .bodyOpenTag, .card_informations .content .bodyCloseTag {
   color: var(--Red);
@@ -176,6 +177,27 @@ body {
 
 .card_profile:hover .bodyOpenTag, .card_profile:hover .bodyCloseTag, .card_profile:hover .h1Tags, .card_profile:hover .h2Tags {
   text-shadow: var(--Red) 0px 0px 15px;
+}
+
+@media (max-width: 768px) {
+  .card_informations {
+    width: 100%;
+    left: 60%;
+    bottom: -30%;
+  }
+}
+@media (max-width: 425px) {
+  .card_informations {
+    width: 100%;
+    left: 0%;
+    bottom: -50%;
+  }
+  .card_informations .content_tags .h1Tags .name {
+    font-size: 14px;
+  }
+  .card_informations .content_tags .h2Tags .title {
+    font-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
