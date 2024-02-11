@@ -7,6 +7,7 @@
   --Red:#F05941;
   --spanColor: rgb(111, 109, 109);
   --pColor:rgba(255, 255, 255, 0.375);
+  --classColor:#574d71;
 }
 
 * {
@@ -24,6 +25,13 @@ body {
   height: 100vh;
   display: grid;
   place-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--pColor);
+  font-size: 14px;
+  transition: 1s;
 }
 
 .card_profile {
@@ -66,6 +74,7 @@ body {
 }
 .card_profile:hover::before {
   height: 100%;
+  box-shadow: 0px 4px 10px #ffffff;
 }
 
 .profile_image {
@@ -169,16 +178,48 @@ body {
 .card_informations .content .amounts .numCourses span, .card_informations .content .amounts .numSteps span {
   color: var(--spanColor);
 }
+.card_informations .content .githubLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card_informations .content .githubLink .divTag {
+  color: var(--Red);
+}
+.card_informations .content .githubLink .classTag {
+  color: var(--classColor);
+}
+.card_informations .content .githubLink .className {
+  color: rgb(94, 210, 210);
+}
 
 .card_profile:hover p {
   text-shadow: #FFF 0px 0px 15px;
   color: var(--White);
 }
 
-.card_profile:hover .bodyOpenTag, .card_profile:hover .bodyCloseTag, .card_profile:hover .h1Tags, .card_profile:hover .h2Tags {
+.card_profile:hover .bodyOpenTag, .card_profile:hover .bodyCloseTag, .card_profile:hover .h1Tags, .card_profile:hover .h2Tags, .card_profile:hover .divTag {
   text-shadow: var(--Red) 0px 0px 15px;
 }
+.card_profile:hover .classTag {
+  text-shadow: var(--classColor) 0px 0px 15px;
+}
+.card_profile:hover a {
+  animation: text 4s infinite ease-in;
+}
 
+@keyframes text {
+  0% {
+    text-shadow: #4a7de3 0px 0px 10px;
+  }
+  50% {
+    text-shadow: #8553cb 0px 0px 10px;
+  }
+  100% {
+    text-shadow: #54d5e6 0px 0px 10px;
+  }
+}
 @media (max-width: 768px) {
   .card_informations {
     width: 100%;
@@ -196,6 +237,9 @@ body {
     font-size: 14px;
   }
   .card_informations .content_tags .h2Tags .title {
+    font-size: 10px;
+  }
+  .card_informations .content_tags .githubLink a {
     font-size: 10px;
   }
 }

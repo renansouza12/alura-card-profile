@@ -82,7 +82,19 @@
                 }
             }
         }
-      
+      .githubLink{
+        @include alignItem();
+        flex-wrap: wrap;
+        .divTag{
+            color:var(--Red);
+        }
+        .classTag{
+            color: var(--classColor);
+        }
+        .className{
+            color: rgb(94, 210, 210);
+        }
+      }
 
 
     }
@@ -92,10 +104,27 @@
     color: var(--White);
 }
 .card_profile:hover {
-    .bodyOpenTag, .bodyCloseTag, .h1Tags, .h2Tags{
+    .bodyOpenTag, .bodyCloseTag, .h1Tags, .h2Tags,.divTag{
         text-shadow:  var(--Red) 0px 0px 15px;
     }
-    
+    .classTag{
+        text-shadow:  var(--classColor) 0px 0px 15px;
+    }
+    a{
+        animation: text 4s infinite ease-in;
+    }
+}
+
+@keyframes text {
+    0%{
+        text-shadow:  #4a7de3 0px 0px 10px; 
+    }
+    50%{
+        text-shadow:  #8553cb 0px 0px 10px; 
+    }
+    100%{
+        text-shadow:  #54d5e6 0px 0px 10px; 
+    }
 }
 
 @media (max-width:768px) {
@@ -120,6 +149,11 @@
                 .title{
                     font-size: 10px;
                 }
+            }
+            .githubLink{
+                a{
+                    font-size: 10px;
+                }   
             }
         }
     }
