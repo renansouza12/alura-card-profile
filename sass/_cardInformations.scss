@@ -85,13 +85,16 @@
       .githubLink{
         @include alignItem();
         flex-wrap: wrap;
-        .divTag{
+        .ancoraTag,.hrefTag,.linkName{
+            transition: 1s;
+        }
+        .ancoraTag{
             color:var(--Red);
         }
-        .classTag{
+        .hrefTag{
             color: var(--classColor);
         }
-        .className{
+        .linkName{
             color: rgb(94, 210, 210);
         }
       }
@@ -104,10 +107,10 @@
     color: var(--White);
 }
 .card_profile:hover {
-    .bodyOpenTag, .bodyCloseTag, .h1Tags, .h2Tags,.divTag{
+    .bodyOpenTag, .bodyCloseTag, .h1Tags, .h2Tags,.ancoraTag{
         text-shadow:  var(--Red) 0px 0px 15px;
     }
-    .classTag{
+    .hrefTag{
         text-shadow:  var(--classColor) 0px 0px 15px;
     }
     a{

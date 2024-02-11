@@ -184,13 +184,16 @@ a {
   align-items: center;
   flex-wrap: wrap;
 }
-.card_informations .content .githubLink .divTag {
+.card_informations .content .githubLink .ancoraTag, .card_informations .content .githubLink .hrefTag, .card_informations .content .githubLink .linkName {
+  transition: 1s;
+}
+.card_informations .content .githubLink .ancoraTag {
   color: var(--Red);
 }
-.card_informations .content .githubLink .classTag {
+.card_informations .content .githubLink .hrefTag {
   color: var(--classColor);
 }
-.card_informations .content .githubLink .className {
+.card_informations .content .githubLink .linkName {
   color: rgb(94, 210, 210);
 }
 
@@ -199,10 +202,10 @@ a {
   color: var(--White);
 }
 
-.card_profile:hover .bodyOpenTag, .card_profile:hover .bodyCloseTag, .card_profile:hover .h1Tags, .card_profile:hover .h2Tags, .card_profile:hover .divTag {
+.card_profile:hover .bodyOpenTag, .card_profile:hover .bodyCloseTag, .card_profile:hover .h1Tags, .card_profile:hover .h2Tags, .card_profile:hover .ancoraTag {
   text-shadow: var(--Red) 0px 0px 15px;
 }
-.card_profile:hover .classTag {
+.card_profile:hover .hrefTag {
   text-shadow: var(--classColor) 0px 0px 15px;
 }
 .card_profile:hover a {
